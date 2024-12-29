@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+import '../../helpers/route_helper.dart';
 import '../../utils/assets_utils.dart';
 import '../../utils/dimensions.dart';
 
@@ -14,6 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
+    _route();
   }
 
   @override
@@ -36,7 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
           tween: Tween<double>(begin: -1, end: 1),
           builder: (context, value, child) {
             return Transform.translate(
-              offset: Offset(0, 0),
+              offset: const Offset(0, 0),
               child: Transform.scale(
                 scale: value < 0 ? 0 : value,
                 child: Image.asset(
@@ -48,6 +51,15 @@ class _SplashScreenState extends State<SplashScreen> {
           },
         ),
       ),
+    );
+  }
+
+  Future _route() async {
+    Future.delayed(
+      const Duration(milliseconds: DimensionUtils.TIME_SPLASH),
+      () {
+        Get.offAllNamed(RouteHelper.signIn);
+      },
     );
   }
 }

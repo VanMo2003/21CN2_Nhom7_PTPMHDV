@@ -1,3 +1,4 @@
+import 'package:booking_app_demo/controllers/loading_controller.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:get/get.dart';
 
@@ -13,4 +14,5 @@ Future<void> binding() async {
 
   Get.lazyPut(() => LanguageController(sharedPreferences: Get.find()));
   Get.lazyPut(() => ThemeController(sharedPreferences: Get.find()));
+  Get.lazyPut(() => LoadingController());
 }
