@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../../controllers/auth_controller.dart';
+import '../../controllers/loading_controller.dart';
 import '../../helpers/valid_helper.dart';
 import '../../utils/assets_utils.dart';
 import '../widgets/button_text_widget.dart';
@@ -116,5 +118,16 @@ class SignInScreen extends StatelessWidget {
     );
   }
 
-  void signIn() {}
+  void signIn() {
+    String username = usernameController.text;
+    String password = passwordController.text;
+
+    if (form.currentState!.validate()) {
+      Get.find<LoadingController>().loading(
+        handle: () {
+          Get.find<AuthenticationController>().login(username, password);
+        },
+      );
+    }
+  }
 }

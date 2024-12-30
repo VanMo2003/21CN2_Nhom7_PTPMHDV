@@ -58,7 +58,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(
       const Duration(milliseconds: DimensionUtils.TIME_SPLASH),
       () {
-        Get.offAllNamed(RouteHelper.signIn);
+        Get.offAllNamed(RouteHelper.init);
       },
     );
   }

@@ -10,4 +10,8 @@ const Map<String, String> vi = {
   KeyLanguage.validPassword:
       'Mật khẩu phải từ ${DimensionUtils.MIN_LENGTH_PASSWORD} đến ${DimensionUtils.MAX_LENGTH_PASSWORD} ký tự',
   KeyLanguage.questionSignUp: "Bạn chưa có tài khoản?",
+  KeyLanguage.errorSystem: 'Lỗi hệ thống',
+  KeyLanguage.errorUnauthentication: 'Bạn không có quyền truy cập',
+  KeyLanguage.errorWrongUsernameOrPassword:
+      'Tài khoản hoặc mật khẩu không chính xác',
 };

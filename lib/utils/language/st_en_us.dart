@@ -10,4 +10,7 @@ const Map<String, String> en = {
   KeyLanguage.validPassword:
       'Password must be between ${DimensionUtils.MIN_LENGTH_PASSWORD} and ${DimensionUtils.MAX_LENGTH_PASSWORD} characters long',
   KeyLanguage.questionSignUp: "Don't have an account?",
+  KeyLanguage.errorSystem: 'System error',
+  KeyLanguage.errorUnauthentication: r"You don't have access",
+  KeyLanguage.errorWrongUsernameOrPassword: 'Account or password is incorrect',
 };
