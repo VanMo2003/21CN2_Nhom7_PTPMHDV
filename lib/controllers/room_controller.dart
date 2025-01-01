@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import '../data/api/api_checker.dart';
 import '../data/models/body/room.dart';
 import '../data/models/response/room_response.dart';
+import '../data/repository/room_repository.dart';
 
 class RoomController extends GetxController implements GetxService {
   RoomController({required this.roomRepo});
